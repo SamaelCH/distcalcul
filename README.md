@@ -1,5 +1,5 @@
 # distcalcul
-Calcular la distancia entre dos puntos
+Herramientas para calculos con rectas
 # Compilacion
 solo escribe:
 ```
