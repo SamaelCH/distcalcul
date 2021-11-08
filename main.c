@@ -62,7 +62,7 @@ int main(){
 		printf("Ingrese el tiempo que duró (horas):\t");
 			scanf("%f", &tem);
 		res = dis/tem;
-		printf("%fkm/h", res);
+		printf("%fkm/h\n", res);
 	}else {
 		printf("No insertaste una opcion valida\n");
 	}
