@@ -3,17 +3,10 @@
 #include <math.h>
 #define DOS 2
 #define ZERO 0
-/* Este es mi primer programa en C, espero que te guste.
- * Intento añadir muchas cosas a este programa.
- * Disfruta.
- * Mi objetivo es mostrar de lo que soy capaz.
- * Tambien ayudar a otras personas con esto.
- * Buenas tardes.
- * :D */
 int main(){
-	float x, xx, y, yy, m, res;
+	float x, xx, y, yy, res;
 	int selection;
-	printf("\033[1mHola y bienvenido\033[0m\nSeleccione la accion que quiera realizar:\n[1]Calcular la distacia de dos puntos\n[2]Calcular la pendiente de dos puntos\n[3]Calcular el punto medio de dos puntos\n");
+	printf("\033[1mHola y bienvenido\033[0m\nSeleccione la accion que quiera realizar:\n[1]Calcular la distacia de dos puntos\n[2]Calcular la pendiente de dos puntos\n[3]Calcular el punto medio de dos puntos\n[4]Calcular la velocidad de un objeto\n");
 	scanf("%d", &selection);
 	if(selection == 1){
 		printf("Ha seleccionado calcular la distancia de dos puntos\n"); //Aqui empieza el copy-paste
@@ -61,6 +54,15 @@ int main(){
 		xxx = (x + xx) / DOS;
 		yyy = (y + yy) / DOS;
 		printf("El punto medio es:\t(%f,%f)\n", xxx, yyy);
+	}else if(selection == 4){
+		float dis, tem;
+		printf("Ha seleccionado calcular la velocidad de un objeto\n");
+		printf("Ingrese el la distancia (km):\t");
+			scanf("%f", &dis);
+		printf("Ingrese el tiempo que duró (horas):\t");
+			scanf("%f", &tem);
+		res = dis/tem;
+		printf("%fkm/h", res);
 	}else {
 		printf("No insertaste una opcion valida\n");
 	}
