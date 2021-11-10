@@ -24,7 +24,7 @@ int main(){
 				res = sqrt(aa);
 			printf("la distancia entre ambos puntos es:\t%f\n", res);
 	}else if(selection == 2){
-			printf("Ha seleccionado calcular la pendiente de dos puntos\n");
+		printf("Ha seleccionado calcular la pendiente de dos puntos\n");
 			printf("Inserte el valor de x1:\t");
 				scanf("%f", &x);
 			printf("inserte el valor de x2:\t");
@@ -41,31 +41,31 @@ int main(){
 			printf("Su respuesta es:\t%f\n", res);
 	}else if(selection == 3){
 		printf("Ha seleccionado calcular el punto medio de dos puntos\n");
-		printf("Ingrese el valor de x1:\t");
-			scanf("%f", &x);
-		printf("Ingrese el valor de x2:\t");
-			scanf("%f", &xx);
-		printf("Ingrese el valor de y1\t");
-			scanf("%f", &y);
-		printf("Ingrese el valor de y2:\t");
-			scanf("%f", &yy);
-		printf("La formula para sacar el punto medio de dos puntos es:\nxm = (x1 + x2)/2\ty\t ym = (y1 + y2)/2\nSustituida es:\txm = (%f + %f)/2\ty\tym = (%f + %f)/2\n", x, xx, y, yy);
-		float xxx, yyy;
-		xxx = (x + xx) / DOS;
-		yyy = (y + yy) / DOS;
-		printf("El punto medio es:\t(%f,%f)\n", xxx, yyy);
+			printf("Ingrese el valor de x1:\t");
+				scanf("%f", &x);
+			printf("Ingrese el valor de x2:\t");
+				scanf("%f", &xx);
+			printf("Ingrese el valor de y1\t");
+				scanf("%f", &y);
+			printf("Ingrese el valor de y2:\t");
+				scanf("%f", &yy);
+			printf("La formula para sacar el punto medio de dos puntos es:\nxm = (x1 + x2)/2\ty\t ym = (y1 + y2)/2\nSustituida es:\txm = (%f + %f)/2\ty\tym = (%f + %f)/2\n", x, xx, y, yy);
+			float xxx, yyy;
+			xxx = (x + xx) / DOS;
+			yyy = (y + yy) / DOS;
+			printf("El punto medio es:\t(%f,%f)\n", xxx, yyy);
 	}else if(selection == 4){
-		float dis, tem;
+			float dis, tem;
 		printf("Ha seleccionado calcular la velocidad de un objeto\n");
-		printf("Ingrese el la distancia (km):\t");
-			scanf("%f", &dis);
-		printf("Ingrese el tiempo que duró (horas):\t");
-			scanf("%f", &tem);
-		res = dis/tem;
-		printf("%fkm/h\n", res);
-	}else {
+			printf("Ingrese el la distancia (km):\t");
+				scanf("%f", &dis);
+			printf("Ingrese el tiempo que duró (horas):\t");
+				scanf("%f", &tem);
+			res = dis/tem;
+			printf("%fkm/h\n", res);
+	}else{
 		printf("No insertaste una opcion valida\n");
-	}
-	printf("Gracias por usar\n");
+		}
+		printf("Gracias por usar\n");
 	return 0;
 }
