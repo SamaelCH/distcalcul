@@ -3,11 +3,23 @@
 #include <math.h>
 #define DOS 2
 #define ZERO 0
+
+//Factorial
+float facto (float x){
+	if (x == 1){
+		return 1;
+	}
+	else {
+		return x * facto(x - 1);
+	}
+}
+
 int main(){
 	float x, xx, y, yy, res;
 	int selection;
-	printf("\033[1mHola y bienvenido\033[0m\nSeleccione la accion que quiera realizar:\n[1]Calcular la distacia de dos puntos\n[2]Calcular la pendiente de dos puntos\n[3]Calcular el punto medio de dos puntos\n[4]Calcular la velocidad de un objeto\n");
+	printf("\033[1mHola y bienvenido\033[0m\nSeleccione la accion que quiera realizar:\n[1]Calcular la distacia de dos puntos\n[2]Calcular la pendiente de dos puntos\n[3]Calcular el punto medio de dos puntos\n[4]Calcular la velocidad de un objeto\n[5]Calcular el factorial de un numero\nIngrese una opción:\t");
 	scanf("%d", &selection);
+	//Distancia
 	if(selection == 1){
 		printf("Ha seleccionado calcular la distancia de dos puntos\n"); //Aqui empieza el copy-paste
 			printf("inserte el valor de x1:\t");
@@ -23,6 +35,7 @@ int main(){
 				aa = pow(ene, DOS) + pow(eme, DOS);
 				res = sqrt(aa);
 			printf("la distancia entre ambos puntos es:\t%f\n", res);
+	//Pendiente
 	}else if(selection == 2){
 		printf("Ha seleccionado calcular la pendiente de dos puntos\n");
 			printf("Inserte el valor de x1:\t");
@@ -39,6 +52,7 @@ int main(){
 			xl = xx - x;
 			res = yl/xl;
 			printf("Su respuesta es:\t%f\n", res);
+	//Punto medio
 	}else if(selection == 3){
 		printf("Ha seleccionado calcular el punto medio de dos puntos\n");
 			printf("Ingrese el valor de x1:\t");
@@ -54,6 +68,7 @@ int main(){
 			xxx = (x + xx) / DOS;
 			yyy = (y + yy) / DOS;
 			printf("El punto medio es:\t(%f,%f)\n", xxx, yyy);
+	//Velocidad
 	}else if(selection == 4){
 			float dis, tem;
 		printf("Ha seleccionado calcular la velocidad de un objeto\n");
@@ -63,9 +78,33 @@ int main(){
 				scanf("%f", &tem);
 			res = dis/tem;
 			printf("%fkm/h\n", res);
+	//Factorial
+	}else if(selection == 5){
+		printf("Ha seleccionado calcular el factorial de un numero\n");
+			printf("Para calcular el factorial de un numero se debe de multiplicar el numero por todos los numeros que lo anteceden hasta el numero 1 por ejemplo, usando el numero 3:\n3! = 3 * 2 * 1\n");
+			printf("Ingrese un valor:\t");
+				float val, rec;
+				scanf("%f", &val);
+				rec = val;
+			if (val > 7){
+				printf("Escribiria toda la operacion a hacer pero la operacion es muy larga\n");
+			}else{
+				while (val >= 1){
+					if (val == 1){
+						printf(" %f\n", val);
+						val--;
+					}else {
+						printf(" %f *", val);
+						val--;
+					}
+
+				}
+			}
+			val = rec;
+			printf("El factorial de %f es %f\n", val, facto(val));
 	}else{
 		printf("No insertaste una opcion valida\n");
-		}
+	}
 		printf("Gracias por usar\n");
 	return 0;
 }
