@@ -4,7 +4,7 @@
 #define DOS 2
 #define ZERO 0
 
-//Fibbonacci sus
+//Fibbonacci num
 int fib(int x){
 	if (x <= 1){
 		return 1;
