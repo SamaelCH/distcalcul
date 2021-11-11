@@ -4,6 +4,19 @@
 #define DOS 2
 #define ZERO 0
 
+//Fibbonacci sus
+int fibonacci(int n)
+{
+  if (n>2)
+    return fibonacci(n-1) + fibonacci(n-2);
+  else if (n==2)
+    return 1;
+  else if (n==1)       
+    return 1;
+  else if (n==0)
+    return 0;
+}
+
 //Factorial
 float facto (float x){
 	if (x == 1){
@@ -17,7 +30,7 @@ float facto (float x){
 int main(){
 	float x, xx, y, yy, res;
 	int selection;
-	printf("\033[1mHola y bienvenido\033[0m\nSeleccione la accion que quiera realizar:\n[1]Calcular la distacia de dos puntos\n[2]Calcular la pendiente de dos puntos\n[3]Calcular el punto medio de dos puntos\n[4]Calcular la velocidad de un objeto\n[5]Calcular el factorial de un numero\nIngrese una opción:\t");
+	printf("\033[1mHola y bienvenido\033[0m\nSeleccione la accion que quiera realizar:\n[1]Calcular la distacia de dos puntos\n[2]Calcular la pendiente de dos puntos\n[3]Calcular el punto medio de dos puntos\n[4]Calcular la velocidad de un objeto\n[5]Calcular el factorial de un numero\n[6]Sucesión Fibbonacci\nIngrese una opción:\t");
 	scanf("%d", &selection);
 	//Distancia
 	if(selection == 1){
@@ -102,6 +115,15 @@ int main(){
 			}
 			val = rec;
 			printf("El factorial de %f es %f\n", val, facto(val));
+	//Fibbonacci
+	}else if (selection == 6){
+		int val, num;
+		printf("Ha seleccionado hacer la sucesion de fibbonacci\ningrese cuantos digitos escribir:\t");
+		scanf("%d", &val);
+		printf("La sucesión es:\n");
+		  for (num=0; num<val; num++){
+      			printf("%d ", fibonacci(num));
+    			}
 	}else{
 		printf("No insertaste una opcion valida\n");
 	}
