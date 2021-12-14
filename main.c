@@ -118,7 +118,7 @@ int main(){
 	//Fibbonacci
 	}else if (selection == 6){
 		int val, num;
-		printf("Ha seleccionado hacer la sucesion de fibbonacci\ningrese cuantos digitos escribir:\t");
+		printf("Ha seleccionado hacer la sucesion de fibonacci\ningrese cuantos digitos escribir:\t");
 		scanf("%d", &val);
 		printf("La sucesión es:\n");
 		  for (num=0; num<val; num++){
