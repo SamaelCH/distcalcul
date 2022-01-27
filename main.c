@@ -78,6 +78,7 @@ int main(){
 				scanf("%f", &yy);
 			printf("La formula para sacar el punto medio de dos puntos es:\nxm = (x1 + x2)/2\ty\t ym = (y1 + y2)/2\nSustituida es:\txm = (%f + %f)/2\ty\tym = (%f + %f)/2\n", x, xx, y, yy);
 			float xxx, yyy;
+			printf("Ahora mostrare como hacer la operacion");
 			xxx = (x + xx) / DOS;
 			yyy = (y + yy) / DOS;
 			printf("El punto medio es:\t(%f,%f)\n", xxx, yyy);
