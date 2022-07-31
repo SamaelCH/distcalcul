@@ -2,11 +2,17 @@
 Herramientas para calculos
 # Compilacion
 ## Linux
-solo escribe:
+#### Clone the repo 
 ```
-make Linux
+git clone https://github.com/SamaelCH/distcalcul
+
+cd distcalcul
 ```
-## Windows
+#### Build for your system
 ```
-make Win
+make build
+```
+#### Enjoy
+```
+./distcalcul
 ```
